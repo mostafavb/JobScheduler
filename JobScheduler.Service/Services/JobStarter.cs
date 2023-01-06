@@ -1,6 +1,6 @@
 ﻿using Hangfire;
+using JobScheduler.Domain.Enums;
 using JobScheduler.Service.Jobs.Interfaces;
-using JobScheduler.Service.Models;
 using JobScheduler.Service.Providers;
 
 namespace JobScheduler.Service.Services;
@@ -11,7 +11,7 @@ public class JobStarter : IJobStarter
     private readonly AssemblyHelper assemblyHelper;
 
     public JobStarter()
-        : this(new JobService(),new AssemblyHelper())
+        : this(new JobService(), new AssemblyHelper())
     {
     }
     public JobStarter(JobService jobService, AssemblyHelper assemblyHelper)
@@ -21,9 +21,9 @@ public class JobStarter : IJobStarter
     }
     public Task SetJobScheduler()
     {
-        RecurringJob.AddOrUpdate("SettingJobs", 
-            () => this.StartJobs(), 
-            "0 10 * * 1", 
+        RecurringJob.AddOrUpdate("SettingJobs",
+            () => this.StartJobs(),
+            "0 10 * * 1",
             TimeZoneInfo.FindSystemTimeZoneById("PST"),
             "general");
 
@@ -46,7 +46,7 @@ public class JobStarter : IJobStarter
                     case JobTypes.FireAndForget:
 
                         //BackgroundJob.Schedule(() => type.Run(new JobCancellationToken(true)),);
-                       
+
 
                         break;
                     case JobTypes.Delayed:
@@ -54,7 +54,7 @@ public class JobStarter : IJobStarter
                         break;
                     case JobTypes.Recurring:
                         RecurringJob.AddOrUpdate(job.Name,
-                           () => type.Run(job.QueueName, JobCancellationToken.Null),
+                           () => type.Run(string.IsNullOrEmpty(job.QueueName) ? "general" : job.QueueName, JobCancellationToken.Null),
                            "*/1 * * * 1-5",
                            TimeZoneInfo.FindSystemTimeZoneById("PST"));
                         break;
@@ -65,6 +65,6 @@ public class JobStarter : IJobStarter
         }
         //Console.WriteLine($"Setting jobs finished at {DateTime.Now.ToLocalTime()}");
         return Task.CompletedTask;
-    }  
+    }
 
 }
