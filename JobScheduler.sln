@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobScheduler.Server", "JobScheduler.App\JobScheduler.Server.csproj", "{430634F5-0C63-4641-80C9-17E50D6F22A7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobScheduler.Service", "JobScheduler.Service\JobScheduler.Service.csproj", "{6C7AF2A9-10F9-4363-A755-51F5697EE7F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobScheduler.Data", "JobScheduler.Data\JobScheduler.Data.csproj", "{37CE7454-40CD-41BC-ADC1-CD7FDE501060}"
@@ -25,16 +23,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{64C819
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobScheduler.UI", "JobScheduler.UI\JobScheduler.UI.csproj", "{B4CF1F0E-46CC-4904-8F47-D017615EC0CE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobScheduler.Server", "JobScheduler.Server\JobScheduler.Server.csproj", "{874D2C70-1848-4C64-AFA6-86AE852DE752}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{430634F5-0C63-4641-80C9-17E50D6F22A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{430634F5-0C63-4641-80C9-17E50D6F22A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{430634F5-0C63-4641-80C9-17E50D6F22A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{430634F5-0C63-4641-80C9-17E50D6F22A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6C7AF2A9-10F9-4363-A755-51F5697EE7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C7AF2A9-10F9-4363-A755-51F5697EE7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C7AF2A9-10F9-4363-A755-51F5697EE7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,18 +47,22 @@ Global
 		{B4CF1F0E-46CC-4904-8F47-D017615EC0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4CF1F0E-46CC-4904-8F47-D017615EC0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4CF1F0E-46CC-4904-8F47-D017615EC0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874D2C70-1848-4C64-AFA6-86AE852DE752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874D2C70-1848-4C64-AFA6-86AE852DE752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874D2C70-1848-4C64-AFA6-86AE852DE752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874D2C70-1848-4C64-AFA6-86AE852DE752}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{430634F5-0C63-4641-80C9-17E50D6F22A7} = {64C81928-C7A5-4F72-B47C-87F16BF9C291}
 		{6C7AF2A9-10F9-4363-A755-51F5697EE7F6} = {DEF284DC-1A1B-4B08-8070-887CF079AD63}
 		{37CE7454-40CD-41BC-ADC1-CD7FDE501060} = {18AC4201-4B51-4CE8-897B-02117D3D9A3C}
 		{8B7A4502-4D3C-4AFD-99E8-EAC9E2D0DBCD} = {2437E1ED-2C0E-47C4-A76B-F370807231D0}
 		{69915196-73CD-4E51-8D56-52ED57B90DF4} = {2437E1ED-2C0E-47C4-A76B-F370807231D0}
 		{FFDEF0A3-0AC0-42BD-8BCE-02F0E6B0979C} = {8B7A4502-4D3C-4AFD-99E8-EAC9E2D0DBCD}
 		{B4CF1F0E-46CC-4904-8F47-D017615EC0CE} = {64C81928-C7A5-4F72-B47C-87F16BF9C291}
+		{874D2C70-1848-4C64-AFA6-86AE852DE752} = {64C81928-C7A5-4F72-B47C-87F16BF9C291}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78649FA7-8D9F-48AB-9BAD-7F83E0F54302}
